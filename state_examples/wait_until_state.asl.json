@@ -1,0 +1,10 @@
+{
+  "StartAt": "WaitUntil",
+  "States": {
+    "WaitUntil": {
+      "Type": "Wait",
+      "Timestamp": "2023-08-14T01:59:00Z",
+      "End": true
+    }
+  }
+}

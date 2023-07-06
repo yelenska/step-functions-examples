@@ -1,0 +1,14 @@
+{
+  "StartAt": "SendToSNS",
+  "States": {
+    "SendToSNS": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::sns:publish",
+      "Parameters": {
+        "TopicArn": "arn:aws:sns:us-east-1:123456789012:myTopic",
+        "Message": "Hello from Step Functions!"
+      },
+      "End": true
+    }
+  }
+}

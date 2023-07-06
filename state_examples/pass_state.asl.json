@@ -1,0 +1,16 @@
+{
+  "StartAt": "TransformationPass",
+  "States": {
+    "TransformationPass": {
+      "Type": "Pass",
+      "Parameters": {
+        "OutputObject": {
+          "OutputKey.$": "$.input.value",
+          "StaticValue": "test"
+        }
+      },
+      "End": true
+    }
+  }
+}
+

@@ -1,0 +1,39 @@
+{
+  "StartAt": "ChoiceState",
+  "States": {
+      "ChoiceState": {
+      "Type" : "Choice",
+      "Choices": [
+        {
+          "Variable": "$.value",
+          "NumericEquals": 1,
+          "Next": "FirstMatchState"
+        },
+        {
+          "Variable": "$.value",
+          "NumericEquals": 2,
+          "Next": "SecondMatchState"
+        }
+      ],
+      "Default": "DefaultState"
+    },
+
+    "FirstMatchState": {
+      "Type" : "Task",
+      "Resource": "arn:aws:lambda:us-east-1:123456789012:function:FirstMatch",
+      "End": true
+    },
+
+    "SecondMatchState": {
+      "Type" : "Task",
+      "Resource": "arn:aws:lambda:us-east-1:123456789012:function:SecondMatch",
+      "End": true
+    },
+
+    "DefaultState": {
+      "Type": "Fail",
+      "Error": "DefaultStateError",
+      "Cause": "No Matches!"
+    }
+  }
+}

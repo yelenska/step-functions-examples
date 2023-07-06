@@ -1,0 +1,10 @@
+{
+  "StartAt": "WaitTenSeconds",
+  "States": {
+    "WaitTenSeconds": {
+      "Type": "Wait",
+      "Seconds": 10,
+      "End": true
+    }
+  }
+}

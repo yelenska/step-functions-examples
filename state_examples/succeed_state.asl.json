@@ -1,0 +1,8 @@
+{
+  "StartAt": "SucceedState",
+  "States": {
+    "SucceedState": {
+      "Type": "Succeed"
+    }
+  }
+}

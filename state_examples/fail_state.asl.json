@@ -1,0 +1,11 @@
+{
+  "StartAt": "FailState",
+  "States": {
+    "FailState": {
+      "Type": "Fail",
+      "Error": "FailStateError",
+      "Cause": "Something went wrong!"
+    }
+  }
+}
+

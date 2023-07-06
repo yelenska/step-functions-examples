@@ -1,0 +1,17 @@
+{
+  "StartAt": "HelloWorld",
+  "States": {
+    "HelloWorld": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:123456789012:function:HelloFunction",
+      "Next": "AfterHelloWorldState",
+      "Comment": "Run the HelloWorld Lambda function"
+    },
+    "AfterHelloWorldState": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:123456789012:function:AfterFunction",
+      "Comment": "Run the AfterHelloWorld Lambda function",
+      "End" : true
+    }
+  }
+}
